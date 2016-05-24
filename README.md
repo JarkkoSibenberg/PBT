@@ -7,4 +7,4 @@ I also didn't construct the gulpfile myself. It is something I have used on seve
 
 Because of time restrictions I didn't look into hooking up Twitter and Instagram APIs.
 
-This page can be found online here: [http://www.sibenberg.com/pbt/](http://wwww.sibenberg.com/pbt/).
+This page can be found online here: [http://www.sibenberg.com/pbt/](http://www.sibenberg.com/pbt/).
