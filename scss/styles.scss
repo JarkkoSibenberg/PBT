@@ -1,0 +1,13 @@
+// Styles
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+@import 'reset';
+
+@import 'global';
+@import 'header';
+@import 'footer';
+@import 'home';
+
+// Packages
+@import 'packages/owl-carousel';

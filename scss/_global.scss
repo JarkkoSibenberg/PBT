@@ -1,0 +1,91 @@
+// Global
+
+body {
+	font-family:$sans;
+	min-width:320px;
+	background:$black;
+	position:relative;
+}
+
+.page {
+	max-width: $contentwidth;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	z-index:1;
+}
+
+.serif {
+	text-align:center;
+	margin:0 auto;
+	font-family:$serif;
+	font-style:italic;
+	font-size:1.8em;
+}
+
+h1 {
+	font-weight:bold;
+	font-size:3em;
+	text-transform: uppercase;
+	line-height:1.15em;
+
+	@include bp($large) {
+		font-size:4em;
+	}
+}
+
+p {
+	font-size:1.2em;
+}
+
+button {
+	width:190px;
+	height:35px;
+	border:1px solid $white;
+	border-radius:5px;
+	text-align:center;
+	line-height:31px;
+	font-size:1.5em;
+	font-weight:bold;
+	color:$white;
+	background:none;
+	outline:none;
+	text-transform: uppercase;
+	margin-bottom:20px;
+	cursor:pointer;
+	font-family: $sans;
+}
+
+.title {
+	color:$white;
+	font-weight:bold;
+	font-size:1.8em;
+	margin-bottom:24px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.col {
+
+	&__full {
+		width:100%;
+		clear:both;
+		display:block;
+	}
+
+	&__third {
+		width:100%;
+		float:left;
+		text-align:center;
+		box-sizing:border-box;
+
+		@include bp($medium) {
+			width:calc((100% - 40px) / 3 );
+			margin-right:20px;
+
+			&:nth-child(3n+3) {
+				margin-right:0px;
+			}
+		}
+	}
+}

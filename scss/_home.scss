@@ -1,0 +1,345 @@
+// Home page
+
+// Main content
+
+.col__full--intro {
+	padding:40px 0;
+	background:$white;
+
+	@include bp($small) {
+		padding:70px 0;
+	}
+
+	h1 {
+		width:80%;
+		text-align:center;
+		margin:0 auto 1rem;
+
+		@include bp($medium) {
+			width:50%;
+		}
+	}
+
+	p {
+		width:80%;
+
+		@include bp($medium) {
+			width:50%;
+		}
+	}
+}
+
+// CTAs
+
+.ctas {
+	overflow:hidden;
+}
+
+.ctas__single {
+	width:100%;
+	height:320px;
+	position:relative;
+	overflow:hidden;
+	display:block;
+
+	@include bp($small) {
+		width:50%;
+		height:320px;
+		float:left;
+	}
+
+	@include bp($medium) {
+		width:25%;
+		height:320px;
+	}
+}
+
+.ctas__cms-image {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	min-width:100%;
+	height:auto;
+}
+
+.ctas__content {
+	position:absolute;
+	top:0px;
+	bottom: 0px;
+	left:0px;
+	right: 0px;
+	opacity:0;
+	padding-top:85px;
+
+	&:hover {
+		background:rgba(0,0,0,0.7);
+		opacity:1;
+
+		.ctas__arrow-left {
+			left:0px;
+			transition:0.3s;
+		}
+
+		.ctas__arrow-right {
+			right:0px;
+			transition:0.3s;
+		}
+	}
+
+	@include bp_max($large-plus) {
+		background:rgba(0,0,0,0.7);
+		opacity:1;
+
+		.ctas__arrow-left {
+			left:0px;
+			transition:0.3s;
+		}
+
+		.ctas__arrow-right {
+			right:0px;
+			transition:0.3s;
+		}
+	}
+}
+
+.ctas__arrows {
+	width:64px;
+	height:64px;
+	margin:10px auto;
+	position:relative;
+}
+
+.ctas__arrow-left {
+	position:absolute;
+	top:0px;
+	left:-240px;
+}
+
+.ctas__arrow-right {
+	position:absolute;
+	top:0px;
+	right:-240px;
+}
+
+.ctas__click {
+	color:$white;
+	font-size:1.8em;
+	margin-top:24px;
+	text-align: center;
+	font-family:$serif;
+	font-style:italic;
+}
+
+// Slider
+
+.owl-controls {
+	position:absolute;
+	bottom:10px;
+	text-align:center;
+	width:100%;
+
+	@include bp($small) {
+		bottom:27px;
+	}
+}
+
+.owl-dots {
+	margin:0 auto;
+}
+
+.owl-dot {
+	width:10px;
+	height:10px;
+	background:$white;
+	display:inline-block;
+	margin:0 5px;
+	transform:rotate(0deg);
+	transition:0.3s;
+
+	&.active {
+		transform:rotate(45deg);
+		transition:0.3s;
+	}
+}
+
+// Social area
+
+.col__full--social {
+	margin:50px 0;
+	border-bottom:1px solid $white;
+	margin-bottom:2px;
+	overflow:hidden;
+
+	.col__third {
+		padding-bottom:60px;
+
+		&:last-child {
+
+			button {
+				margin-top:7px;
+			}
+		}
+	}
+
+	.content {
+		color:$white;
+		padding:0 20px 20px;
+
+		@include bp($small) {
+			padding:0 50px 20px;
+		}
+	}
+
+	button {
+		clear:both;
+	}
+}
+
+.col__third__title {
+	font-weight: normal;
+	border-bottom:1px solid $white;
+	padding:0 0 10px;
+	margin:0 20px 20px;
+
+	@include bp($medium) {
+		margin:0 0 20px;
+	}
+}
+
+.twitter-content {
+	font-size:1.5em;
+	line-height:1.4em;
+	overflow:hidden;
+}
+
+.twitter-content__time {
+	float:right;
+	display:block;
+	padding-top:6px;
+}
+
+.instagram-content {
+	width:100%;
+	clear:both;
+	display:block;
+	padding:0 20px;
+	box-sizing:border-box;
+
+	@include bp($medium) {
+		padding:0px;
+	}
+}
+
+.instagram-content__image {
+	width:48%;
+	float:left;
+
+	img {
+		width:100%;
+		height:auto;
+		float:right;
+		max-width:190px;
+	}
+
+	&--right {
+		float:right;
+
+		img {
+			float:left;
+		}
+	}
+}
+
+#signup {
+	padding:20px 20px 0;
+
+	@include bp($xlarge) {
+		padding:20px 50px 0;
+	}
+
+	label {
+		width:30%;
+		max-width:100px;
+		float:left;
+		border-right:1px solid $white;
+		font-size:1.8em;
+		color:$white;
+		line-height:18px;
+		font-family: $serif;
+		font-style: italic;
+		text-align:left;
+		padding-left:2%;
+
+		@include bp($medium) {
+			font-size:1.2em;
+		}
+
+		@include bp($xlarge) {
+			font-size:1.8em;
+		}
+	}
+
+	input {
+		width:65%;
+		float:right;
+		border:none;
+		outline:none;
+		background:none;
+		color:$white;
+		line-height:18px;
+	}
+
+	select {
+		float:left;
+		margin-left:10%;
+		color:$white;
+		background:none;
+		border:none;
+		outline:none;
+		font-family: $serif;
+		font-style: italic;
+		font-size:1.8em;
+		padding-right:12px;
+		margin-top: -3px;
+
+		@include bp($medium) {
+			margin-left:5%;
+			font-size:1.2em;
+			margin-top: 0px;
+		}
+
+		@include bp($xlarge) {
+			margin-left:10%;
+			font-size:1.8em;
+			margin-top: -3px;
+		}
+
+		&:last-child {
+
+			@include bp($medium) {
+				margin-left:0%;
+			}
+
+			@include bp($xlarge) {
+				margin-left:10%;
+			}
+
+		}
+
+		option {
+			background:$black;
+			color:$white;
+			padding:4px;
+		}
+
+	}
+}
+
+.signup__row {
+	border:1px solid $white;
+	padding:8px 15px;
+	margin-bottom:15px;
+	overflow:hidden;
+}
+

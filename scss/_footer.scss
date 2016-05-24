@@ -1,0 +1,80 @@
+// Footer
+
+footer {
+	width:100%;
+	clear:both;
+	border-top:1px solid $white;
+	padding:35px 0;
+
+}
+
+.footer__content {
+	text-align:center;
+
+	li {
+		display:inline-block;
+		list-style-type:none;
+		height:15px;
+		line-height:15px;
+		font-size:1.5em;
+		color:$white;
+		padding:0 30px;
+		margin-bottom:20px;
+		width:100%;
+		box-sizing:border-box;
+
+		@include bp($small) {
+			width:auto;
+		}
+
+		@include bp($xlarge) {
+			border-right:1px solid $white;
+			padding:0 20px;
+		}
+
+		&:last-child {
+			border-right:none;
+		}
+	}
+
+	a {
+		color:$white;
+	}
+}
+
+.footer__social-link {
+	margin-right:20px;
+
+	img {
+		height:16px;
+		width:auto;
+	}
+
+	&:last-child {
+		margin-right:0px;
+	}
+}
+
+.footer__bottom {
+	width:100%;
+	padding:36px 0 0;
+	text-align:center;
+}
+
+.bottom-img {
+	background:url(images/bottom-img.jpg) center center;
+	background-size:cover;
+	height:100vh;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	z-index:0;
+}
+
+.bottom-img__overlay {
+	height:100vh;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	background:url(images/pattern-overlay.png) center center;
+}
